@@ -64,7 +64,7 @@
 /* No movement for the header group, even when the old page was scrolled past it. */
 ::view-transition-group(site-header) { animation: none; }
 
-html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; background: var(--footer-bg); }
 
 body {
   margin: 0;
@@ -91,8 +91,6 @@ a:hover { color: var(--ink-hover); }
 
 img, svg { max-width: 100%; }
 
-.mono { font-family: var(--mono); }
-
 /* Skip link: hidden until focused */
 .skip-link {
   position: absolute;
@@ -113,7 +111,8 @@ img, svg { max-width: 100%; }
 .skip-link:hover { color: var(--on-amber); }
 
 .container {
-  max-width: 1200px;
+  /* box-sizing is border-box, so add the gutters to keep a 1200px content width */
+  max-width: calc(1200px + 2 * var(--gutter));
   margin: 0 auto;
   padding-left: var(--gutter);
   padding-right: var(--gutter);
@@ -343,7 +342,6 @@ img, svg { max-width: 100%; }
 }
 /* Prompt (1), lead (3) and buttons (4) step by sibling position; the H1 (2) animates by line. */
 .hero-copy > :nth-child(1) { --ic-i: 1; }
-.hero-copy > :nth-child(2) { --ic-i: 2; }
 .hero-copy > :nth-child(3) { --ic-i: 3; }
 .hero-copy > :nth-child(4) { --ic-i: 4; }
 .hero-copy > :not(.hero-title) {
@@ -501,6 +499,10 @@ img, svg { max-width: 100%; }
   border: 1px solid var(--chip-border);
   border-radius: 999px;
   padding: 6px 14px;
+  white-space: nowrap;
+}
+@media (max-width: 359px) {
+  .chip { padding-inline: 10px; }
 }
 .app-title {
   margin: 0;
@@ -622,6 +624,7 @@ img, svg { max-width: 100%; }
   min-width: 0;
 }
 .contact-email {
+  align-self: flex-start;
   display: inline-flex;
   align-items: center;
   min-height: 52px;
@@ -702,12 +705,12 @@ img, svg { max-width: 100%; }
 
 /* ---------- Legal pages ---------- */
 .legal-page {
-  max-width: 1200px;
+  max-width: calc(1200px + 2 * var(--gutter));
   margin: 0 auto;
   padding: clamp(56px, 7vw, 96px) var(--gutter) var(--section-pad);
 }
 .legal {
-  max-width: 72ch;
+  max-width: 40em;
   color: var(--text-2);
   font-size: 18px;
   line-height: 1.7;
@@ -792,11 +795,6 @@ img, svg { max-width: 100%; }
   border-top: 1px solid var(--line);
   scroll-margin-top: 16px;
 }
-.legal section section {
-  padding-top: 0;
-  margin-top: 32px;
-  border-top: 0;
-}
 .legal > section:first-of-type { margin-top: 48px; }
 
 .legal-summary {
@@ -817,7 +815,7 @@ img, svg { max-width: 100%; }
 }
 .legal-toc ol {
   margin: 0;
-  padding-left: 2.2em;
+  padding-left: 4.5ch;
   columns: 2 260px;
   column-gap: 40px;
 }
@@ -826,8 +824,8 @@ img, svg { max-width: 100%; }
   break-inside: avoid;
 }
 .legal-toc a {
-  display: inline-block;
-  padding: 10px 0;
+  display: block;
+  padding: 11px 0;
   color: var(--nav);
   text-decoration: none;
 }
@@ -856,6 +854,7 @@ img, svg { max-width: 100%; }
 }
 .legal table {
   width: 100%;
+  min-width: 36rem;
   border-collapse: collapse;
   font-size: 16px;
   line-height: 1.55;
@@ -885,6 +884,11 @@ img, svg { max-width: 100%; }
 .legal tbody tr:last-child th, .legal tbody tr:last-child td { border-bottom: 0; }
 .legal th + th, .legal th + td, .legal td + td { border-left: 1px solid var(--border); }
 
+@media (max-width: 640px) {
+  .legal table { font-size: 15px; }
+  .legal th, .legal td { padding: 10px 12px; }
+}
+
 /* ---------- 404 ---------- */
 .notfound .container {
   padding-top: clamp(64px, 9vw, 128px);
@@ -894,8 +898,10 @@ img, svg { max-width: 100%; }
   gap: 48px 64px;
 }
 .notfound-block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
+  /* Both language blocks share the same rows, so heading, text and button line up. */
+  display: grid;
+  grid-row: span 4;
+  grid-template-rows: subgrid;
+  justify-items: start;
+  row-gap: 16px;
 }
