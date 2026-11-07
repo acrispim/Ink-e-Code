@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://inkecode.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inkecode.com/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://inkecode.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inkecode.com/"/>
+  </url>
+  <url>
+    <loc>https://inkecode.com/pt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inkecode.com/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://inkecode.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inkecode.com/"/>
+  </url>
+  <url>
+    <loc>https://inkecode.com/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inkecode.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://inkecode.com/pt/privacidade/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inkecode.com/privacy/"/>
+  </url>
+  <url>
+    <loc>https://inkecode.com/pt/privacidade/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inkecode.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://inkecode.com/pt/privacidade/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inkecode.com/privacy/"/>
+  </url>
+  <url>
+    <loc>https://inkecode.com/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inkecode.com/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://inkecode.com/pt/termos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inkecode.com/terms/"/>
+  </url>
+  <url>
+    <loc>https://inkecode.com/pt/termos/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inkecode.com/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://inkecode.com/pt/termos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inkecode.com/terms/"/>
+  </url>
+</urlset>
