@@ -43,7 +43,7 @@
 <header class="legal-header">
 <p class="eyebrow">legal</p>
 <h1>Privacy Policy</h1>
-<p class="legal-meta">Last updated: November 7, 2026 (version 1.0)</p>
+<p class="legal-meta">Last updated: November 8, 2026 (version 1.1)</p>
 <p class="legal-lang-note">This is an English translation. If it differs from the <a href="/pt/privacidade/" hreflang="pt-BR">Portuguese version</a>, the Portuguese version prevails.</p>
 </header>
 <nav class="legal-toc" aria-label="Privacy Policy contents">
@@ -189,7 +189,7 @@
       </tbody>
     </table>
   </div>
-  <p>Android may show other technical permissions in the app's list. If the foreground service permission appears, note that the app does not use it: it has no foreground service and does not use location in the background. If the permission to write to storage appears (only up to Android 9), note that the app does not ask for it during use. On Android 5.0 and 5.1, it is granted at installation and the map library may use it to keep the map cache in a shared folder.</p>
+  <p>Android may show other technical permissions in the app's list. They are for internal use and give no access to your data. The app does not ask for permission to use a foreground service or to write to the device's shared storage. It has no foreground service and does not use location in the background.</p>
 
   <h3>When the app uses location</h3>
   <ul>
@@ -218,13 +218,13 @@
     <dt>Compass sensors and coordinates</dt>
     <dd>The accelerometer, the magnetometer and the rotation sensor are read in real time, for the compass, the level and calibration. The compass coordinates only appear on the screen. None of this is stored.</dd>
   </dl>
-  <p>Trails, points, routes and settings stay in the app's private area on the device. Photos and the map cache stay in app folders. On Android 5.0 and 5.1, the map cache may be in a shared folder called “osmdroid”.</p>
+  <p>Trails, points, routes and settings stay in the app's private area on the device. Photos stay in an app folder. The map cache stays in the app's cache folder, never in a shared folder.</p>
 
   <h3>What leaves the device</h3>
   <ul>
-    <li><strong>OpenStreetMap.</strong> To show the map, the app downloads images from the servers of the OpenStreetMap Foundation (OSMF) over a secure connection (HTTPS). With each request, the OSMF receives the device's IP address, the app's technical name with the version number, and the map area requested. This area is usually the region where you are. When you open a saved trail, the map shows the area of that trail's points and route, so the OSMF also receives that area. The same applies to any place you move the map to. The OSMF handles this data according to its <a href="https://osmfoundation.org/wiki/Privacy_Policy" rel="noopener" lang="en">Privacy Policy</a>, which states that its network of servers may generate a record of your location.</li>
+    <li><strong>OpenStreetMap.</strong> To show the map, the app downloads images from the servers of the OpenStreetMap Foundation (OSMF) over a secure connection (HTTPS). With each request, the OSMF receives the device's IP address, the app's identification (the app's name and version and our contact details: the website inkecode.com and the email support@inkecode.com), and the map area requested. This area is usually the region where you are. When you open a saved trail, the map shows the area of that trail's points and route, so the OSMF also receives that area. The same applies to any place you move the map to. The OSMF handles this data according to its <a href="https://osmfoundation.org/wiki/Privacy_Policy" rel="noopener" lang="en">Privacy Policy</a>, which states that its network of servers may generate a record of your location.</li>
     <li><strong>Google Play services.</strong> The app asks Google Play services for the location. Google Play services is a Google component installed on the device. The app does not send data to Google on its own. Google Play services may process location and network signals, such as Wi-Fi and mobile networks, and technical data about the use of its services. This follows the device's location settings and <a href="https://policies.google.com/privacy" rel="noopener">Google's Privacy Policy</a>. Android may also use Google Play services to get the emoji font that the app displays. The data you create in the app is not part of this.</li>
-    <li><strong>Android backup.</strong> On Android 6.0 or newer, if backup is turned on on the device, Android may copy the app's data to your Google account. The copy may include trails, points, recorded routes, point photos, settings and, in some cases, the map cache. The backup stays in your Google account and never reaches us. On Android 9 or newer, if the device has a screen lock (PIN, pattern or password), the backup is encrypted with it. Android has a backup limit of 25 MB per app. After you use the map, the map cache may go over this limit; in that case, Android stops backing up the app until the data is below 25 MB again.</li>
+    <li><strong>Android backup.</strong> On Android 6.0 or newer, if backup is turned on on the device, Android may copy the app's data to your Google account. The copy may include trails, points, recorded routes, point photos and settings. The map cache is never included in the backup. The backup stays in your Google account and never reaches us. On Android 9 or newer, if the device has a screen lock (PIN, pattern or password), the backup is encrypted with it. Android has a backup limit of 25 MB per app. If the app's data goes over this limit, for example with many photos, Android stops backing up the app until the data is below 25 MB again.</li>
     <li><strong>Exporting a trail.</strong> When you tap “<span lang="pt-BR">Exportar trilha</span>” (Export trail), the app copies to the clipboard a text with the trail name and, for each point, the name, coordinates, description, bearing (azimuth), distance and scout paces. The recorded route and the photos are not included in this text. The text only goes where you paste it.</li>
     <li><strong>Copying Morse and cipher text.</strong> The text goes to the clipboard only when you tap copy.</li>
     <li><strong>Camera app.</strong> To take a photo of a point, the app gives your camera app temporary access to the file of the new photo, so that it can save it. The app does not send the photos to anyone.</li>
@@ -248,10 +248,9 @@
     <li><strong>One point:</strong> delete the point. The app deletes the point and its photo.</li>
     <li><strong>One photo:</strong> remove or replace the point's photo. The app deletes the old photo.</li>
     <li><strong>A trail's route:</strong> use “<span lang="pt-BR">Limpar percurso</span>” (Clear route). The app deletes the positions recorded for that trail.</li>
-    <li><strong>One trail:</strong> touch and hold the trail in the list and choose “<span lang="pt-BR">Excluir</span>” (Delete). The app deletes the trail, its points and the recorded route. <strong>Note:</strong> the photos of that trail's points may stay on the device. To delete them, delete the points or the photos before deleting the trail, or clear the app's data.</li>
+    <li><strong>One trail:</strong> touch and hold the trail in the list and choose “<span lang="pt-BR">Excluir</span>” (Delete). The app deletes the trail, its points, the photos of those points and the recorded route.</li>
     <li><strong>Settings:</strong> you can change them at any time on the settings screen. The step counter is on the compass screen.</li>
     <li><strong>Everything at once:</strong> in Android settings, open Apps, then Ferramentas Escoteiras, then Storage, and tap “<span lang="pt-BR">Limpar dados</span>” (Clear data) (the names vary a little from device to device). Or uninstall the app. Both options delete everything the app stores, including photos and the map cache.</li>
-    <li><strong>Android 5.0 and 5.1:</strong> if the map cache is in the shared “osmdroid” folder, it may stay on the device after uninstalling. You can delete it with a file manager.</li>
     <li><strong>Backup:</strong> the copies in your Google account follow Google's rules. You can turn off backup and manage backups in the settings of Android and of your Google account. If you reinstall the app, Android may restore the data from this backup.</li>
     <li><strong>Outside the app:</strong> text that you exported and pasted somewhere else, and copies that the camera app saved in the gallery, must be deleted where they are.</li>
   </ul>
@@ -319,7 +318,7 @@
         </tr>
         <tr>
           <th scope="row">Download the map images</th>
-          <td>IP address, technical name and version of the app, map area requested, sent by the device to the OSMF</td>
+          <td>IP address, name and version of the app with our contact details, map area requested, sent by the device to the OSMF</td>
           <td>Performance of the contract for using the app, at your request (art. 7, V). The OSMF handles this data according to its own policy.</td>
         </tr>
         <tr>
@@ -455,6 +454,7 @@
   <p>If we change the purpose, the manner or the duration of the handling, who the controller is, or who we share data with, we will publish the new version on this page with a prominent summary of the changes. When the change affects an app, we will also mention it in the release notes of the new version on Google Play. When the handling is based on your consent and you do not agree with the change, you may withdraw your consent.</p>
   <h3>Version history</h3>
   <ul>
+    <li>Version 1.1, of November 8, 2026: the app section now describes version 3.0 of Ferramentas Escoteiras. The app no longer has the foreground service and write-to-storage permissions; the map cache stays in the app's cache folder, never in a shared folder, and is not included in the backup; deleting a trail also deletes the photos of its points; and requests to OpenStreetMap now identify the app by its name, its version and our contact details.</li>
     <li>Version 1.0, of November 7, 2026: first version.</li>
   </ul>
 </section>

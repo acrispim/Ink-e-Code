@@ -474,7 +474,7 @@ img, svg { max-width: 100%; }
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 40px 56px;
-  /* Side by side only when the tools column still fits three tools across. */
+  /* Side by side only when the tools column still fits two tools across comfortably. */
   @media (min-width: 1024px) {
     grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   }
@@ -525,13 +525,14 @@ img, svg { max-width: 100%; }
   margin: 0;
   padding: 0;
   display: grid;
-  /* Nine tools: 3 x 3 from tablet up, 2 across on phones, 1 on the narrowest screens. */
+  /* Eight tools: 4 x 2 on tablets, where they span the card; 2 x 4 on phones and beside
+     the app info on desktop; 1 across on the narrowest screens. */
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
   align-self: start;
   min-width: 0;
-  @media (min-width: 600px) {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  @media (768px <= width < 1024px) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   @media (max-width: 359px) {
     grid-template-columns: minmax(0, 1fr);
@@ -547,12 +548,6 @@ img, svg { max-width: 100%; }
   overflow-wrap: break-word;
   @media (max-width: 599px) {
     padding: 14px;
-  }
-}
-/* Two across leaves the ninth tool alone: let it take the full row. */
-.tools li:last-child:nth-child(odd) {
-  @media (360px <= width < 600px) {
-    grid-column: 1 / -1;
   }
 }
 .tool-name { font-weight: 600; }

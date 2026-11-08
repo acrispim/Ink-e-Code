@@ -43,7 +43,7 @@
 <header class="legal-header">
 <p class="eyebrow">jurídico</p>
 <h1>Política de Privacidade</h1>
-<p class="legal-meta">Última atualização: 7 de novembro de 2026 (versão 1.0)</p>
+<p class="legal-meta">Última atualização: 8 de novembro de 2026 (versão 1.1)</p>
 <p class="legal-lang-note">Também disponível em <a href="/privacy/" hreflang="en">inglês</a> (tradução). Em caso de divergência, prevalece esta versão em português.</p>
 </header>
 <nav class="legal-toc" aria-label="Índice da Política de Privacidade">
@@ -189,7 +189,7 @@
       </tbody>
     </table>
   </div>
-  <p>O Android pode mostrar outras permissões técnicas na lista do app. Se aparecer a permissão de serviço em primeiro plano, saiba que o app não a usa: ele não tem nenhum serviço em primeiro plano e não usa a localização em segundo plano. Se aparecer a permissão de gravar no armazenamento (só até o Android 9), saiba que o app não a pede durante o uso. No Android 5.0 e 5.1, ela é concedida na instalação e a biblioteca de mapas pode usá-la para guardar o cache de mapas numa pasta compartilhada.</p>
+  <p>O Android pode mostrar outras permissões técnicas na lista do app. Elas são de uso interno e não dão acesso aos seus dados. O app não pede permissão para usar serviço em primeiro plano nem para gravar no armazenamento compartilhado do aparelho. Ele não tem nenhum serviço em primeiro plano e não usa a localização em segundo plano.</p>
 
   <h3>Quando o app usa a localização</h3>
   <ul>
@@ -218,13 +218,13 @@
     <dt>Sensores e coordenadas da bússola</dt>
     <dd>O acelerômetro, o magnetômetro e o sensor de rotação são lidos na hora, para a bússola, o nível e a calibração. As coordenadas da bússola só aparecem na tela. Nada disso é guardado.</dd>
   </dl>
-  <p>Trilhas, pontos, percursos e configurações ficam na área privada do app no aparelho. As fotos e o cache do mapa ficam em pastas do app. No Android 5.0 e 5.1, o cache do mapa pode ficar numa pasta compartilhada chamada “osmdroid”.</p>
+  <p>Trilhas, pontos, percursos e configurações ficam na área privada do app no aparelho. As fotos ficam numa pasta do app. O cache do mapa fica na pasta de cache do app, nunca numa pasta compartilhada.</p>
 
   <h3>O que sai do aparelho</h3>
   <ul>
-    <li><strong>OpenStreetMap.</strong> Para mostrar o mapa, o app baixa imagens dos servidores de mapas da Fundação OpenStreetMap (OSMF), por conexão segura (HTTPS). Em cada pedido, a OSMF recebe o endereço IP do aparelho, o nome técnico do app com o número da versão e a área do mapa pedida. Essa área costuma ser a região onde você está. Quando você abre uma trilha salva, o mapa mostra a área dos pontos e do percurso dessa trilha, então a OSMF também recebe essa área. O mesmo vale para qualquer lugar para onde você move o mapa. A OSMF trata esses dados conforme a <a href="https://osmfoundation.org/wiki/Privacy_Policy" rel="noopener" lang="en">Privacy Policy</a> dela, que informa que a rede de servidores da OSMF pode gerar um registro da sua localização.</li>
+    <li><strong>OpenStreetMap.</strong> Para mostrar o mapa, o app baixa imagens dos servidores de mapas da Fundação OpenStreetMap (OSMF), por conexão segura (HTTPS). Em cada pedido, a OSMF recebe o endereço IP do aparelho, a identificação do app (o nome e a versão do app e os nossos contatos: o site inkecode.com e o e-mail support@inkecode.com) e a área do mapa pedida. Essa área costuma ser a região onde você está. Quando você abre uma trilha salva, o mapa mostra a área dos pontos e do percurso dessa trilha, então a OSMF também recebe essa área. O mesmo vale para qualquer lugar para onde você move o mapa. A OSMF trata esses dados conforme a <a href="https://osmfoundation.org/wiki/Privacy_Policy" rel="noopener" lang="en">Privacy Policy</a> dela, que informa que a rede de servidores da OSMF pode gerar um registro da sua localização.</li>
     <li><strong>Google Play services.</strong> O app pede a localização ao Google Play services, um componente do Google instalado no aparelho. O app não envia dados ao Google por conta própria. O Google Play services pode tratar sinais de localização e de rede, como Wi-Fi e redes móveis, e dados técnicos de uso dos seus serviços. Isso segue as configurações de localização do aparelho e a <a href="https://policies.google.com/privacy" rel="noopener">Política de Privacidade do Google</a>. O Android também pode usar o Google Play services para obter a fonte de emojis que o app mostra. Os dados que você cria no app não fazem parte disso.</li>
-    <li><strong>Backup do Android.</strong> No Android 6.0 ou mais recente, se o backup estiver ativado no aparelho, o Android pode copiar os dados do app para a sua conta do Google. A cópia pode incluir trilhas, pontos, percursos gravados, fotos dos pontos, configurações e, em alguns casos, o cache do mapa. O backup fica na sua conta do Google e nunca chega a nós. No Android 9 ou mais recente, se o aparelho tiver bloqueio de tela (PIN, padrão ou senha), o backup é criptografado com ele. O Android tem um limite de 25 MB de backup por app. Depois que você usa o mapa, o cache do mapa pode passar desse limite; nesse caso, o Android para de fazer o backup do app até os dados voltarem a ficar abaixo de 25 MB.</li>
+    <li><strong>Backup do Android.</strong> No Android 6.0 ou mais recente, se o backup estiver ativado no aparelho, o Android pode copiar os dados do app para a sua conta do Google. A cópia pode incluir trilhas, pontos, percursos gravados, fotos dos pontos e configurações. O cache do mapa nunca entra no backup. O backup fica na sua conta do Google e nunca chega a nós. No Android 9 ou mais recente, se o aparelho tiver bloqueio de tela (PIN, padrão ou senha), o backup é criptografado com ele. O Android tem um limite de 25 MB de backup por app. Se os dados do app passarem desse limite, por exemplo com muitas fotos, o Android para de fazer o backup do app até os dados voltarem a ficar abaixo de 25 MB.</li>
     <li><strong>Exportar uma trilha.</strong> Quando você toca em “Exportar trilha”, o app copia para a área de transferência um texto com o nome da trilha e, de cada ponto, o nome, as coordenadas, a descrição, o azimute, a distância e os passos escoteiros. O percurso gravado e as fotos não entram nesse texto. O texto só vai para onde você colar.</li>
     <li><strong>Copiar no Morse e na cifra.</strong> O texto vai para a área de transferência só quando você toca em copiar.</li>
     <li><strong>App de câmera.</strong> Para tirar a foto de um ponto, o app dá ao seu app de câmera acesso temporário ao arquivo da nova foto, para que ele possa salvá-la. O app não envia as fotos a ninguém.</li>
@@ -248,10 +248,9 @@
     <li><strong>Um ponto:</strong> exclua o ponto. O app apaga o ponto e a foto dele.</li>
     <li><strong>Uma foto:</strong> remova ou troque a foto do ponto. O app apaga a foto antiga.</li>
     <li><strong>O percurso de uma trilha:</strong> use “Limpar percurso”. O app apaga as posições gravadas dessa trilha.</li>
-    <li><strong>Uma trilha:</strong> toque e segure a trilha na lista e escolha “Excluir”. O app apaga a trilha, os pontos dela e o percurso gravado. <strong>Atenção:</strong> as fotos dos pontos dessa trilha podem continuar guardadas no aparelho. Para apagá-las, exclua os pontos ou as fotos antes de excluir a trilha, ou limpe os dados do app.</li>
+    <li><strong>Uma trilha:</strong> toque e segure a trilha na lista e escolha “Excluir”. O app apaga a trilha, os pontos dela, as fotos desses pontos e o percurso gravado.</li>
     <li><strong>Configurações:</strong> você pode mudá-las a qualquer momento na tela de configurações. O contador de passos fica na tela da bússola.</li>
     <li><strong>Tudo de uma vez:</strong> nas configurações do Android, abra Apps, depois Ferramentas Escoteiras, depois Armazenamento, e toque em “Limpar dados” (os nomes mudam um pouco de aparelho para aparelho). Ou desinstale o app. As duas opções apagam tudo o que o app guarda, inclusive as fotos e o cache do mapa.</li>
-    <li><strong>Android 5.0 e 5.1:</strong> se o cache do mapa estiver na pasta compartilhada “osmdroid”, ela pode continuar no aparelho depois da desinstalação. Você pode apagá-la com um gerenciador de arquivos.</li>
     <li><strong>Backup:</strong> as cópias na sua conta do Google seguem as regras do Google. Você pode desativar o backup e gerenciar os backups nas configurações do Android e da sua conta do Google. Se você reinstalar o app, o Android pode restaurar os dados a partir desse backup.</li>
     <li><strong>Fora do app:</strong> textos que você exportou e colou em outro lugar, e cópias que o app de câmera salvou na galeria, precisam ser apagados onde estão.</li>
   </ul>
@@ -319,7 +318,7 @@
         </tr>
         <tr>
           <th scope="row">Baixar as imagens do mapa</th>
-          <td>Endereço IP, nome técnico e versão do app, área do mapa pedida, enviados pelo aparelho à OSMF</td>
+          <td>Endereço IP, nome e versão do app com os nossos contatos, área do mapa pedida, enviados pelo aparelho à OSMF</td>
           <td>Execução do contrato de uso do app, a seu pedido (art. 7º, V). A OSMF trata esses dados conforme a política dela.</td>
         </tr>
         <tr>
@@ -455,6 +454,7 @@
   <p>Se mudarmos a finalidade, a forma ou o tempo de tratamento, quem é o controlador ou com quem compartilhamos dados, publicaremos a nova versão nesta página com um resumo das mudanças em destaque. Quando a mudança afetar um app, também a indicaremos nas notas da nova versão na Google Play. Quando o tratamento se basear no seu consentimento e você não concordar com a mudança, poderá revogar o consentimento.</p>
   <h3>Histórico de versões</h3>
   <ul>
+    <li>Versão 1.1, de 8 de novembro de 2026: a seção do app passou a descrever a versão 3.0 do Ferramentas Escoteiras. O app não tem mais as permissões de serviço em primeiro plano e de gravar no armazenamento; o cache do mapa fica na pasta de cache do app, nunca numa pasta compartilhada, e não entra no backup; excluir uma trilha também apaga as fotos dos pontos dela; e os pedidos ao OpenStreetMap passaram a identificar o app pelo nome, pela versão e pelos nossos contatos.</li>
     <li>Versão 1.0, de 7 de novembro de 2026: primeira versão.</li>
   </ul>
 </section>
